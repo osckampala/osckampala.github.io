@@ -221,7 +221,7 @@ const Home = () => {
               <div className={`rounded-xl overflow-hidden shadow-lg bg-white dark:bg-gray-800 hover:shadow-xl transition-shadow duration-300 ${visibleSections.includes('features') ? 'animate-fade-in delay-100' : 'opacity-0'}`}>
                 <div className="h-48 overflow-hidden">
                   <img 
-                    src="public/uploads/" 
+                    src="public/uploads/tektalentlogo.png" 
                     alt="Tech Events" 
                     className="w-full h-full object-cover"
                   />
@@ -247,7 +247,7 @@ const Home = () => {
               <div className={`rounded-xl overflow-hidden shadow-lg bg-white dark:bg-gray-800 hover:shadow-xl transition-shadow duration-300 ${visibleSections.includes('features') ? 'animate-fade-in delay-200' : 'opacity-0'}`}>
                 <div className="h-48 overflow-hidden">
                   <img 
-                    src="publig/uploads" 
+                    src="public/uploads/tektalentlogo.png" 
                     alt="Tech Projects" 
                     className="w-full h-full object-cover"
                   />
@@ -273,7 +273,7 @@ const Home = () => {
               <div className={`rounded-xl overflow-hidden shadow-lg bg-white dark:bg-gray-800 hover:shadow-xl transition-shadow duration-300 ${visibleSections.includes('features') ? 'animate-fade-in delay-300' : 'opacity-0'}`}>
                 <div className="h-48 overflow-hidden">
                   <img 
-                    src="public/uploads/" 
+                    src="public/uploads/tektalentlogo.png" 
                     alt="Tech Blog" 
                     className="w-full h-full object-cover"
                   />
