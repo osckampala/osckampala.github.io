@@ -4,7 +4,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/tektalentafrica.github.io', 
+  base: '/tektalentafrica.github.io/', 
   server: {
     host: "::",
     port: 8080,
