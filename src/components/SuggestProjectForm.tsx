@@ -72,7 +72,7 @@ export function SuggestProjectForm({ trigger, className }: { trigger: React.Reac
                 <FormItem>
                   <FormLabel>Your Name</FormLabel>
                   <FormControl>
-                    <Input placeholder="John Doe" required {...field} />
+                    <Input placeholder="your name" required {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -87,7 +87,7 @@ export function SuggestProjectForm({ trigger, className }: { trigger: React.Reac
                   <FormControl>
                     <Input 
                       type="email" 
-                      placeholder="you@example.com" 
+                      placeholder="yourname@gmail.com" 
                       required 
                       {...field} 
                     />
