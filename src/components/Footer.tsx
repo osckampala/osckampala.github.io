@@ -13,7 +13,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div className="col-span-1">
             <img 
-              src="/lovable-uploads/53cf2abd-ec3c-4a19-876a-b9c83a403e3a.png" 
+              src="public/uploads/tektalentlogo.png" 
               alt="Tek Talent Africa" 
               className="h-14 mb-6" 
             />
