@@ -2,7 +2,7 @@
 <h1 align="center" style="bold">Tek Talent Africa Community Site</h1>
 
 <p align="center">
-  <img src="/uploads/" alt="Tek Talent Africa Logo" width="200" />
+  <img src="public/uploads/tektalentlogo.png" alt="Tek Talent Africa Logo" width="200" />
 </p>
 
 <p align="center">
