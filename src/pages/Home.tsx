@@ -188,7 +188,7 @@ const Home = () => {
                 <div className="skeleton h-full w-full rounded-xl"></div>
               ) : (
                 <img 
-                  src="public/uploads" 
+                  src="public/uploads/tektalentlogo.png" 
                   alt="Tek Talent comunity" 
                   className="w-full h-full object-cover"
                 />
