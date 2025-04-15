@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# This script runs linting checks before allowing a commit to proceed.
+# If linting fails, the commit will be aborted.
+npx lint-staged
+if [ $? -ne 0 ]; then
+  echo "Linting failed. Please fix the issues before committing."
+  exit 1
+fi
+echo "Linting passed. Proceeding with commit."
