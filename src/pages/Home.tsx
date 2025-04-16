@@ -57,16 +57,16 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
       {/* Hero Section with Text First */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden py-16">
-        <div className="container mx-auto px-4 z-10 text-center mb-8">
-          <div className="animate-fade-in">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gray-800 dark:text-white">
+      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-32 pb-16">
+        <div className="container mx-auto px-4 z-10 text-center mb-16">
+          <div className="animate-fade-in max-w-4xl mx-auto">
+            <h1 className="text-5xl md:text-7xl font-bold mb-8 text-gray-800 dark:text-white">
               <span className="text-tekOrange">Tek Talent</span> Africa Community
             </h1>
-            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-12 max-w-3xl mx-auto">
               A vibrant community of tech enthusiasts, developers and innovators building the future of technology in Africa.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-wrap gap-6 justify-center">
               <Button className="bg-tekOrange hover:bg-orange-600 text-white text-lg px-8 py-6">
                 Join Our Community
               </Button>
