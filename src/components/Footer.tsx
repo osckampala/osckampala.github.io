@@ -1,6 +1,5 @@
-
 import { Link } from "react-router-dom";
-import { ArrowUp, Twitter, Linkedin, Github } from "lucide-react";
+import { ArrowUp, Twitter, Linkedin, Github as GitHub } from "lucide-react";
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -60,7 +59,7 @@ const Footer = () => {
               <span className="sr-only">LinkedIn</span>
             </Link>
             <Link to="#" className="text-gray-400 hover:text-tekOrange transition-colors">
-              <Github size={18} />
+              <GitHub size={18} />
               <span className="sr-only">GitHub</span>
             </Link>
           </div>
