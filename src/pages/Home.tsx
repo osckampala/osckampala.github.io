@@ -137,50 +137,22 @@ const Home = () => {
       </section>
       
       {/* About Us Section */}
-      <section 
-        id="about" 
+      <section
+        id="about"
         ref={aboutSectionRef}
         className="py-20 bg-gray-50 dark:bg-gray-800"
       >
         <div className="container mx-auto px-4">
-          <div className={`text-center mb-16 ${visibleSections.includes('about') ? 'animate-fade-in' : 'opacity-0'}`}>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800 dark:text-white">About Us</h2>
-            <div className="w-24 h-1 bg-tekOrange mx-auto mb-6"></div>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              We're building a community that nurtures tech talent and drives innovation across Africa.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className={loading ? "space-y-4" : `space-y-4 ${visibleSections.includes('about') ? 'animate-fade-in' : 'opacity-0'}`}>
-              {loading ? (
-                <>
-                  <div className="skeleton h-8 w-3/4 mb-2"></div>
-                  <div className="skeleton h-4 w-full"></div>
-                  <div className="skeleton h-4 w-full"></div>
-                  <div className="skeleton h-4 w-5/6"></div>
-                  <div className="skeleton h-8 w-1/2 mt-4"></div>
-                </>
-              ) : (
-                <>
-                  <h3 className="text-2xl font-bold text-gray-800 dark:text-white">Our Mission</h3>
-                  <p className="text-gray-600 dark:text-gray-300">
-                    Tek Talent Africa is dedicated to empowering tech enthusiasts with the knowledge, skills, and community support 
-                    needed to thrive in the global technology landscape while solving local problems.
-                  </p>
-                  <p className="text-gray-600 dark:text-gray-300">
-                    We believe in collaboration, continuous learning, and creating opportunities for tech talent in Africa to grow
-                    and make meaningful contributions to the tech ecosystem.
-                  </p>
-                  <div className="pt-4">
-                    <Link to="/about">
-                      <Button variant="outline" className="border-tekOrange text-tekOrange hover:bg-tekOrange/10">
-                        Learn More About Us
-                      </Button>
-                    </Link>
-                  </div>
-                </>
-              )}
+          <div className={`grid grid-cols-1 md:grid-cols-2 gap-12 items-center ${visibleSections.includes('about') ? 'animate-fade-in' : 'opacity-0'}`}>
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800 dark:text-white">About Us</h2>
+              <div className="w-24 h-1 bg-tekOrange mb-6"></div>
+              <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
+                Tek Talent Africa is a community-driven platform dedicated to fostering tech talent and innovation across Africa. We provide resources, networking opportunities, and support to help tech enthusiasts grow and succeed.
+              </p>
+              <p className="text-lg text-gray-600 dark:text-gray-300">
+                Our mission is to bridge the gap between tech education and industry needs, creating a sustainable ecosystem for tech talent development in Africa.
+              </p>
             </div>
             
             <div className={loading ? "h-80" : `h-80 overflow-hidden rounded-xl shadow-lg ${visibleSections.includes('about') ? 'animate-fade-in' : 'opacity-0'}`}>
@@ -221,7 +193,7 @@ const Home = () => {
               <div className={`rounded-xl overflow-hidden shadow-lg bg-white dark:bg-gray-800 hover:shadow-xl transition-shadow duration-300 ${visibleSections.includes('features') ? 'animate-fade-in delay-100' : 'opacity-0'}`}>
                 <div className="h-48 overflow-hidden">
                   <img 
-                    src="public/uploads/tektalentlogo.png" 
+                    src="public/uploads/tektalentlogo.png"
                     alt="Tech Events" 
                     className="w-full h-full object-cover"
                   />
@@ -247,7 +219,7 @@ const Home = () => {
               <div className={`rounded-xl overflow-hidden shadow-lg bg-white dark:bg-gray-800 hover:shadow-xl transition-shadow duration-300 ${visibleSections.includes('features') ? 'animate-fade-in delay-200' : 'opacity-0'}`}>
                 <div className="h-48 overflow-hidden">
                   <img 
-                    src="public/uploads/tektalentlogo.png" 
+                    src="public/uploads/tektalentlogo.png"
                     alt="Tech Projects" 
                     className="w-full h-full object-cover"
                   />
@@ -255,11 +227,11 @@ const Home = () => {
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-3 text-gray-800 dark:text-white">Projects</h3>
                   <p className="text-gray-600 dark:text-gray-300 mb-4">
-                    Collaborative projects where members work together to build solutions for real-world challenges.
+                    Explore our community projects and initiatives that are making a real impact in the tech ecosystem.
                   </p>
                   <Link to="/projects">
                     <Button variant="ghost" className="text-tekOrange hover:bg-tekOrange/10 p-0 flex items-center">
-                      Discover Projects <ArrowRight size={16} className="ml-1" />
+                      View Projects <ArrowRight size={16} className="ml-1" />
                     </Button>
                   </Link>
                 </div>
@@ -296,20 +268,19 @@ const Home = () => {
       </section>
       
       {/* Join Community CTA */}
-      <section 
+      <section
         id="cta"
         ref={ctaSectionRef}
-        className="py-20 bg-gradient-to-r from-tekOrange to-orange-600 text-white"
+        className="py-20 bg-tekOrange text-white"
       >
-        <div className="container mx-auto px-4">
-          <div className={`text-center max-w-3xl mx-auto ${visibleSections.includes('cta') ? 'animate-fade-in' : 'opacity-0'}`}>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Join Our Growing Community</h2>
+        <div className="container mx-auto px-4 text-center">
+          <div className={`max-w-3xl mx-auto ${visibleSections.includes('cta') ? 'animate-fade-in' : 'opacity-0'}`}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Join Our Community Today</h2>
             <p className="text-lg mb-8">
-              Connect with like-minded tech enthusiasts, access resources, participate in events and grow your skills with the 
-              Tek Talent Africa community.
+              Be part of a growing community of tech enthusiasts, developers, and innovators. Together, we're building the future of technology in Africa.
             </p>
-            <Button size="lg" className="bg-white text-tekOrange hover:bg-gray-100 text-lg px-8 py-6">
-              Become a Member
+            <Button className="bg-white text-tekOrange hover:bg-gray-100 text-lg px-8 py-6">
+              Get Started
             </Button>
           </div>
         </div>
