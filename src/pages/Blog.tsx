@@ -4,7 +4,6 @@ import SkeletonCard from "@/components/SkeletonCard";
 import { getMarkdownFiles, MarkdownFile } from "@/utils/markdownLoader";
 import BlogPost from "@/components/BlogPost";
 
-// Categories for filtering
 const categories = ["All", "Technology", "Community", "Education", "Social Impact"];
 
 const Blog = () => {
@@ -16,7 +15,6 @@ const Blog = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        // Get only static data for GitHub Pages compatibility
         const posts = await getMarkdownFiles('content/blog');
         
         setBlogPosts(posts);
@@ -119,6 +117,31 @@ const Blog = () => {
           )}
         </div>
       </section>
+
+      {/* Newsletter Subscription */}
+      <section className="py-16 bg-gray-50 dark:bg-gray-800">
+        <div className="container mx-auto px-4">
+          <div className="max-w-2xl mx-auto bg-white dark:bg-gray-700 rounded-xl shadow-md p-8">
+            <h2 className="text-2xl font-bold mb-4 text-center text-gray-800 dark:text-white">Subscribe to Our Newsletter</h2>
+            <p className="text-gray-600 dark:text-gray-300 mb-6 text-center">
+              Get the latest blog posts and updates delivered directly to your inbox.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <input 
+                type="email" 
+                placeholder="Enter your email address" 
+                className="flex-1 px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-md focus:outline-none focus:border-tekOrange"
+              />
+              <Button className="bg-tekOrange hover:bg-orange-600 text-white">
+                Subscribe
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
  
 
 export default Blog;
