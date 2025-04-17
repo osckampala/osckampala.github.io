@@ -73,7 +73,52 @@ const Blog = () => {
           </div>
         </div>
       </section>
-  
+
+   {/* Blog Posts */}
+      <section className="py-16 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {loading ? (
+              Array(6).fill(0).map((_, index) => (
+                <SkeletonCard key={index} />
+              ))
+            ) : (
+              filteredPosts.map(post => (
+                <BlogPost
+                  key={post.slug}
+                  title={post.frontmatter.title}
+                  date={post.frontmatter.date}
+                  author={post.frontmatter.author || "Tek Talent Africa"}
+                  summary={post.frontmatter.description}
+                  image={post.frontmatter.image || "public/uploads/tektalentlogo.png"}
+                  category={post.frontmatter.category || "General"}
+                  slug={post.slug}
+                />
+              ))
+            )}
+          </div>
+          
+          {filteredPosts.length > 0 && filteredPosts.length >= 6 && (
+            <div className="mt-12 text-center">
+              <Button variant="outline" className="border-tekOrange text-tekOrange dark:text-orange-300 hover:bg-orange-50 dark:hover:bg-tekOrange/20">
+                Load More
+              </Button>
+            </div>
+          )}
+          
+          {filteredPosts.length === 0 && !loading && (
+            <div className="text-center py-10">
+              <p className="text-lg text-gray-600 dark:text-gray-400">No posts found in this category.</p>
+              <Button 
+                className="mt-4 bg-tekOrange hover:bg-orange-600 text-white"
+                onClick={() => setSelectedCategory("All")}
+              >
+                View All Posts
+              </Button>
+            </div>
+          )}
+        </div>
+      </section>
  
 
 export default Blog;
