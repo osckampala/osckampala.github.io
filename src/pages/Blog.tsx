@@ -38,6 +38,21 @@ const Blog = () => {
       setFilteredPosts(blogPosts.filter(post => post.frontmatter.category === selectedCategory));
     }
   }, [selectedCategory, blogPosts]);
+
+  return (
+    <div className="pt-20">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-tekOrange/10 to-orange-100 dark:from-tekOrange/5 dark:to-gray-800 py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in text-gray-800 dark:text-white">Our Blog</h1>
+            <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 animate-fade-in">
+              Insights, stories and knowledge from our community members. Stay updated with the 
+              latest trends, tutorials and discussions in the tech world.
+            </p>
+          </div>
+        </div>
+      </section>
   
  
 
