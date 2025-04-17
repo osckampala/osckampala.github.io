@@ -35,14 +35,14 @@ export function getStaticMarkdownFiles(type: 'blog' | 'events'): MarkdownFile[] 
   if (type === 'blog') {
     return [
       {
-        slug: '',
+        slug: 'tes-of-the-blog',
         frontmatter: {
-          title: "",
-          date: "",
-          description: "",
-          author: "",
+          title: "Test of the blog",
+          date: "2025-04-17",
+          description: "this is a test of the blogging system.",
+          author: "Author",
           image: "public/uploads/",
-          category: ""
+          category: "Technology"
         },
         content: ""
     }
