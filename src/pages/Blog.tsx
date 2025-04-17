@@ -53,6 +53,26 @@ const Blog = () => {
           </div>
         </div>
       </section>
+
+      {/* Category Filter */}
+      <section className="py-8 bg-white dark:bg-gray-900 border-b dark:border-gray-700">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            {categories.map(category => (
+              <Button 
+                key={category} 
+                variant={selectedCategory === category ? "default" : "outline"}
+                className={selectedCategory === category 
+                  ? "bg-tekOrange hover:bg-orange-600 text-white" 
+                  : "border-tekOrange text-tekOrange dark:text-orange-300 hover:bg-orange-50 dark:hover:bg-tekOrange/20"}
+                onClick={() => setSelectedCategory(category)}
+              >
+                {category}
+              </Button>
+            ))}
+          </div>
+        </div>
+      </section>
   
  
 
