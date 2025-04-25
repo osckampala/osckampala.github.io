@@ -14,7 +14,13 @@
 		"deploy": "gh-pages -d dist",
 		"format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
 		"prepare": "husky install",
-		"postinstall": "husky add .husky/pre-commit \"npm run lint\""
+		"typecheck": "tsc --noEmit",
+		"check": "npm run typecheck && npm run lint",
+		"check:fix": "npm run typecheck -- --noEmit && npm run lint -- --fix",
+		"check:format": "npm run format -- --check",
+		"check:format:fix": "npm run format -- --write",
+		"check:all": "npm run check && npm run check:format",
+		"check:all:fix": "npm run check:fix && npm run check:format:fix"
 	},
 	"lint-staged": {
 		"*.{js,jsx,ts,tsx}": [
