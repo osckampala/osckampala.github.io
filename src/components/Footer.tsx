@@ -9,8 +9,8 @@ const Footer = () => {
 	return (
 		<footer className="bg-tekwhite pt-16 pb-8 text-black dark:bg-gray-900 dark:text-white">
 			<div className="container mx-auto px-4">
-				<div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-					<div className="col-span-1">
+				<div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12 text-center md:text-left">
+					<div className="col-span-1 flex flex-col items-center md:items-start">
 						<img
 							src="public/uploads/tektalentlogo.png"
 							alt="Tek Talent Africa"
@@ -23,7 +23,7 @@ const Footer = () => {
 
 					<div className="col-span-1">
 						<h4 className="text-lg font-semibold mb-4">Community Links</h4>
-						<div className="flex flex-col gap-2">
+						<div className="flex flex-col gap-2  items-center md:items-start">
 							<Link
 								to="/events"
 								className="text-black/70 dark:text-white/70 hover:text-tekOrange transition-colors"
@@ -47,7 +47,7 @@ const Footer = () => {
 
 					<div className="col-span-1">
 						<h4 className="text-lg font-semibold mb-4">Explore</h4>
-						<div className="flex flex-col gap-2">
+						<div className="flex flex-col gap-2 items-center md:items-start">
 							<Link
 								to="#join-us"
 								className="text-black/70 dark:text-white/70 hover:text-tekOrange transition-colors"
@@ -59,7 +59,7 @@ const Footer = () => {
 
 					<div className="col-span-1">
 						<h4 className="text-lg font-semibold mb-4">Company</h4>
-						<div className="flex flex-col gap-2">
+						<div className="flex flex-col gap-2 items-center md:items-start">
 							<Link
 								to="/about"
 								className="text-black/70 dark:text-white/70 hover:text-tekOrange transition-colors"
@@ -76,12 +76,12 @@ const Footer = () => {
 					</div>
 				</div>
 
-				<div className="border-t border-gray-300 dark:border-gray-800 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center">
-					<p className="text-black/60 dark:text-white/60 text-sm mb-4 md:mb-0">
+				<div className="border-t border-gray-300 dark:border-gray-800 pt-8 mt-8 flex flex-col md:flex-row md:justify-between items-center">
+					<p className="text-black/60 dark:text-white/60 text-sm mb-4 md:mb-0 text-center md:text-left">
 						© 2025 Tek Talent Africa. All rights reserved.
 					</p>
 
-					<div className="flex space-x-6">
+					<div className="flex space-x-6 mb-4 md:mb-0">
 						<Link
 							to="#"
 							className="text-black/60 dark:text-white/60 hover:text-tekOrange transition-colors"
