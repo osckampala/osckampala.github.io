@@ -1,82 +1,121 @@
-import { Link } from "react-router-dom";
-import { ArrowUp, Twitter, Linkedin, Github as GitHub } from "lucide-react";
+import { Link } from 'react-router-dom';
+import { ArrowUp, Twitter, Linkedin, Github } from 'lucide-react';
 
 const Footer = () => {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-  
-  return (
-    <footer className="dark:bg-tekBlack text-white pt-16 pb-8">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-          <div className="col-span-1">
-            <img 
-              src="public/uploads/tektalentlogo.png" 
-              alt="Tek Talent Africa" 
-              className="h-14 mb-6" 
-            />
-            <p className="dark:text-gray-300 text-gray-700 mb-4">
-              Empowering innovation through collaboration, creativity, and community engagement.
-            </p>
-          </div>
-          
-          <div className="col-span-1">
-            <h4 className="text-lg font-semibold mb-4">Community Links</h4>
-            <div className="flex flex-col gap-2">
-              <Link to="/events" className="dark:text-gray-300 text-gray-700 hover:text-tekOrange transition-colors">Events</Link>
-              <Link to="/projects" className="dark:text-gray-300 text-gray-700 hover:text-tekOrange transition-colors">Projects</Link>
-              <Link to="/blog" className="dark:text-gray-300 text-gray-700 hover:text-tekOrange transition-colors">Blog Posts</Link>
-            </div>
-          </div>
-          
-          <div className="col-span-1">
-            <h4 className="text-lg font-semibold mb-4">Explore</h4>
-            <div className="flex flex-col gap-2">
-              <Link to="#join-us" className="dark:text-gray-300 text-gray-700 hover:text-tekOrange transition-colors">Join Us</Link>
-            </div>
-          </div>
-          
-          <div className="col-span-1">
-            <h4 className="text-lg font-semibold mb-4">Company</h4>
-            <div className="flex flex-col gap-2">
-              <Link to="/about" className="dark:text-gray-300 text-gray-700 hover:text-tekOrange transition-colors">About us</Link>
-              <Link to="/contact" className="dark:text-gray-300 text-gray-700 hover:text-tekOrange transition-colors">Contact us</Link>
-            </div>
-          </div>
-        </div>
-        
-        <div className="border-t border-gray-800 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="dark:text-gray-300 text-gray-700 text-sm mb-4 md:mb-0">© 2025 Tek Talent Africa. All rights reserved.</p>
-          
-          <div className="flex space-x-6">
-            <Link to="#" className="text-gray-500 hover:text-tekOrange transition-colors">
-              <Twitter size={18} />
-              <span className="sr-only">Twitter</span>
-            </Link>
-            <Link to="#" className="text-gray-500 hover:text-tekOrange transition-colors">
-              <Linkedin size={18} />
-              <span className="sr-only">LinkedIn</span>
-            </Link>
-            
-            <Link to="#" className="text-gray-500 hover:text-tekOrange transition-colors">
-              <Github size={18} />
+	const scrollToTop = () => {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	};
 
-              <span className="sr-only">GitHub</span>
-            </Link>
-          </div>
-          
-          <button 
-            onClick={scrollToTop}
-            className="fixed bottom-8 right-8 bg-tekOrange p-3 rounded-full shadow-lg hover:bg-orange-600 transition-colors z-40"
-            aria-label="Back to Top"
-          >
-            <ArrowUp size={20} className="text-white" />
-          </button>
-        </div>
-      </div>
-    </footer>
-  );
+	return (
+		<footer className="bg-tekwhite pt-16 pb-8 text-black dark:bg-gray-900 dark:text-white">
+			<div className="container mx-auto px-4">
+				<div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12 text-center md:text-left">
+					<div className="col-span-1 flex flex-col items-center md:items-start">
+						<img
+							src="public/uploads/tektalentlogo.png"
+							alt="Tek Talent Africa"
+							className="h-14 mb-6"
+						/>
+						<p className="text-black/80 dark:text-white/80 mb-4">
+							Empowering innovation through collaboration, creativity, and community engagement.
+						</p>
+					</div>
+
+					<div className="col-span-1">
+						<h4 className="text-lg font-semibold mb-4">Community Links</h4>
+						<div className="flex flex-col gap-2  items-center md:items-start">
+							<Link
+								to="/events"
+								className="text-black/70 dark:text-white/70 hover:text-tekOrange transition-colors"
+							>
+								Events
+							</Link>
+							<Link
+								to="/projects"
+								className="text-black/70 dark:text-white/70 hover:text-tekOrange transition-colors"
+							>
+								Projects
+							</Link>
+							<Link
+								to="/blog"
+								className="text-black/70 dark:text-white/70 hover:text-tekOrange transition-colors"
+							>
+								Blog Posts
+							</Link>
+						</div>
+					</div>
+
+					<div className="col-span-1">
+						<h4 className="text-lg font-semibold mb-4">Explore</h4>
+						<div className="flex flex-col gap-2 items-center md:items-start">
+							<Link
+								to="#join-us"
+								className="text-black/70 dark:text-white/70 hover:text-tekOrange transition-colors"
+							>
+								Join Us
+							</Link>
+						</div>
+					</div>
+
+					<div className="col-span-1">
+						<h4 className="text-lg font-semibold mb-4">Company</h4>
+						<div className="flex flex-col gap-2 items-center md:items-start">
+							<Link
+								to="/about"
+								className="text-black/70 dark:text-white/70 hover:text-tekOrange transition-colors"
+							>
+								About us
+							</Link>
+							<Link
+								to="/contact"
+								className="text-black/70 dark:text-white/70 hover:text-tekOrange transition-colors"
+							>
+								Contact us
+							</Link>
+						</div>
+					</div>
+				</div>
+
+				<div className="border-t border-gray-300 dark:border-gray-800 pt-8 mt-8 flex flex-col md:flex-row md:justify-between items-center">
+					<p className="text-black/60 dark:text-white/60 text-sm mb-4 md:mb-0 text-center md:text-left">
+						© 2025 Tek Talent Africa. All rights reserved.
+					</p>
+
+					<div className="flex space-x-6 mb-4 md:mb-0">
+						<Link
+							to="#"
+							className="text-black/60 dark:text-white/60 hover:text-tekOrange transition-colors"
+						>
+							<Twitter size={18} />
+							<span className="sr-only">Twitter</span>
+						</Link>
+						<Link
+							to="#"
+							className="text-black/60 dark:text-white/60 hover:text-tekOrange transition-colors"
+						>
+							<Linkedin size={18} />
+							<span className="sr-only">LinkedIn</span>
+						</Link>
+						<Link
+							to="#"
+							className="text-black/60 dark:text-white/60 hover:text-tekOrange transition-colors"
+						>
+							<Github size={18} />
+							<span className="sr-only">GitHub</span>
+						</Link>
+					</div>
+
+					<button
+						onClick={scrollToTop}
+						className="fixed bottom-8 right-8 bg-tekOrange p-3 rounded-full shadow-lg hover:bg-orange-600 transition-colors z-40"
+						aria-label="Back to Top"
+					>
+						<ArrowUp size={20} className="text-white" />
+					</button>
+				</div>
+			</div>
+		</footer>
+	);
 };
 
 export default Footer;

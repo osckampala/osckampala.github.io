@@ -1,0 +1,13 @@
+#!/bin/sh
+# Skip the Husky shell script headers that will fail in v10.0.0
+
+# Check TypeScript types
+echo "🔎 Checking TypeScript types..."
+npm run typecheck || {
+  echo "❌ TypeScript type check failed. Please fix the type errors before committing."
+  exit 1
+}
+
+# Run lint-staged
+echo "🔍 Running lint-staged..."
+npx lint-staged
