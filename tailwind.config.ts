@@ -65,6 +65,7 @@ export default {
 				},
 				tekOrange: '#F97316', // Custom orange from logo
 				tekBlack: '#000000',
+				tekWhite: '#FFFFFF',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
