@@ -30,7 +30,7 @@ const NavBar = () => {
 	};
 
 	// Tobias or anyone can add this WhatsApp community link here
-	const whatsappLink = '';
+	const whatsappLink = 'https://chat.whatsapp.com/DiZaDhDwo3NH73JBcOilOY';
 
 	return (
 		<nav
