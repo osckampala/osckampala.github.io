@@ -7,7 +7,7 @@ const Footer = () => {
 	};
 
 	return (
-		<footer className="bg-tekwhite pt-16 pb-8 text-black dark:bg-tekBlack dark:text-white">
+		<footer className="bg-tekwhite pt-16 pb-8 text-black dark:bg-gray-900 dark:text-white">
 			<div className="container mx-auto px-4">
 				<div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
 					<div className="col-span-1">
