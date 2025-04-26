@@ -1,5 +1,4 @@
-
-import { projects } from "@/data/projects";
+import { projects } from '@/data/projects';
 
 export type Project = {
   id: string;
@@ -18,5 +17,5 @@ export function getProjects(): Project[] {
 }
 
 export function getProject(slug: string): Project | undefined {
-  return projects.find((project) => project.slug === slug);
+  return projects.find(project => project.slug === slug);
 }

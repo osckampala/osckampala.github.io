@@ -18,14 +18,14 @@ export interface MarkdownFile {
 
 export async function getMarkdownFiles(directory: string): Promise<MarkdownFile[]> {
   console.log(`Getting markdown files from ${directory}`);
-  
+
   // Based on the directory, it should return the appropriate static data
   if (directory.includes('blog')) {
     return getStaticMarkdownFiles('blog');
   } else if (directory.includes('events')) {
     return getStaticMarkdownFiles('events');
   }
-  
+
   return [];
 }
 
@@ -36,12 +36,12 @@ export function getStaticMarkdownFiles(type: 'blog' | 'events'): MarkdownFile[] 
       {
         slug: 'test-of-the-blog',
         frontmatter: {
-          title: "Test of the blog",
-          date: "2025-04-17",
-          description: "this is a test of the blogging system.",
-          author: "Author",
-          image: "public/uploads/",
-          category: "Technology"
+          title: 'Test of the blog',
+          date: '2025-04-17',
+          description: 'this is a test of the blogging system.',
+          author: 'Author',
+          image: 'public/uploads/',
+          category: 'Technology',
         },
         content: `# Blog System Guide
 
@@ -74,8 +74,8 @@ The system uses:
 1. Create a new markdown file
 2. Add frontmatter with required metadata
 3. Write content in markdown format
-4. Save the file in the appropriate directory`
-      }
+4. Save the file in the appropriate directory`,
+      },
     ];
   }
 
@@ -83,7 +83,7 @@ The system uses:
 }
 
 export function isUpcomingEvent(date: string): boolean {
-const eventDate = new Date(date);
-const currentDate = new Date();
-return eventDate >= currentDate;
+  const eventDate = new Date(date);
+  const currentDate = new Date();
+  return eventDate >= currentDate;
 }

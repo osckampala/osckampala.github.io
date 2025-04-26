@@ -1,12 +1,11 @@
-
-import React from "react";
-import { Skeleton } from "@/components/ui/skeleton";
+import React from 'react';
+import { Skeleton } from '@/components/ui/skeleton';
 
 interface SkeletonCardProps {
   className?: string;
 }
 
-const SkeletonCard: React.FC<SkeletonCardProps> = ({ className = "" }) => {
+const SkeletonCard: React.FC<SkeletonCardProps> = ({ className = '' }) => {
   return (
     <div className={`rounded-xl overflow-hidden bg-white dark:bg-gray-800 shadow-md ${className}`}>
       <Skeleton className="h-48 w-full" />

@@ -1,7 +1,6 @@
-
-import React from "react";
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
 
 const NotFound = () => {
   return (
@@ -16,9 +15,7 @@ const NotFound = () => {
         </p>
         <div className="pt-6">
           <Link to="/">
-            <Button className="bg-tekOrange hover:bg-orange-600 text-white">
-              Return to Home
-            </Button>
+            <Button className="bg-tekOrange hover:bg-orange-600 text-white">Return to Home</Button>
           </Link>
         </div>
       </div>

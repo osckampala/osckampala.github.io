@@ -1,7 +1,6 @@
-
-import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
-import { ChevronUp } from "lucide-react";
+import { useState, useEffect } from 'react';
+import { Button } from '@/components/ui/button';
+import { ChevronUp } from 'lucide-react';
 
 const BackToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -11,7 +10,7 @@ const BackToTop = () => {
     const scrollHeight = document.documentElement.scrollHeight;
     const clientHeight = document.documentElement.clientHeight;
     const halfwayPoint = (scrollHeight - clientHeight) / 2;
-    
+
     if (window.scrollY > halfwayPoint) {
       setIsVisible(true);
     } else {
@@ -22,13 +21,13 @@ const BackToTop = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth"
+      behavior: 'smooth',
     });
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", toggleVisibility);
-    return () => window.removeEventListener("scroll", toggleVisibility);
+    window.addEventListener('scroll', toggleVisibility);
+    return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
 
   return (
