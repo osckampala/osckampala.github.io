@@ -1,4 +1,3 @@
-
 import { projects } from "@/data/projects";
 
 export type Project = {
@@ -18,5 +17,5 @@ export function getProjects(): Project[] {
 }
 
 export function getProject(slug: string): Project | undefined {
-  return projects.find((project) => project.slug === slug);
+  return projects.find(project => project.slug === slug);
 }

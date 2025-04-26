@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Sun, Moon } from "lucide-react";
@@ -10,11 +9,11 @@ const ThemeToggle = () => {
 
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme") as Theme | null;
-    
+
     if (storedTheme) {
       setTheme(storedTheme);
       document.documentElement.classList.toggle("dark", storedTheme === "dark");
-    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
       setTheme("dark");
       document.documentElement.classList.add("dark");
     }
@@ -22,16 +21,16 @@ const ThemeToggle = () => {
 
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
-    
+
     // Save theme to local storage
     localStorage.setItem("theme", newTheme);
-    
+
     setTheme(newTheme);
     document.documentElement.classList.toggle("dark", newTheme === "dark");
   };
 
   return (
-    <Button 
+    <Button
       onClick={toggleTheme}
       aria-label="Toggle theme"
       variant="ghost"
