@@ -9,8 +9,10 @@ export default [
   {
     ignores: ["dist"],
   },
+  ...js.configs.recommended,
+  ...tseslint.configs.recommended,
+  prettier,
   {
-    extends: [js.configs.recommended, ...tseslint.configs.recommended, prettier],
     files: ["**/*.{ts,tsx}"],
     languageOptions: {
       ecmaVersion: 2020,
@@ -22,7 +24,10 @@ export default [
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
-      "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
+      "react-refresh/only-export-components": [
+        "warn",
+        { allowConstantExport: true },
+      ],
       "@typescript-eslint/no-unused-vars": "off",
       "@typescript-eslint/no-empty-object-type": "off",
       "@typescript-eslint/no-explicit-any": "off",
