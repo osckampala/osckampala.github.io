@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
-import { type Project } from '@/utils/projectLoader';
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Link } from "react-router-dom";
+import { type Project } from "@/utils/projectLoader";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 
 interface ProjectCardProps {
   project: Project;

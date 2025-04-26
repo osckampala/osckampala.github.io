@@ -1,10 +1,10 @@
-import { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import BackToTop from '@/components/BackToTop';
-import SkeletonCard from '@/components/SkeletonCard';
-import ImageCarousel from '@/components/ImageCarousel';
-import { ArrowRight } from 'lucide-react';
+import { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import BackToTop from "@/components/BackToTop";
+import SkeletonCard from "@/components/SkeletonCard";
+import ImageCarousel from "@/components/ImageCarousel";
+import { ArrowRight } from "lucide-react";
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -40,21 +40,21 @@ const Home = () => {
   }, []);
 
   const carouselImages = [
-    'public/uploads/tektalentlogo.png',
-    'public/uploads/tektalentlogo.png',
-    'public/uploads/tektalentlogo.png',
-    'public/uploads/tektalentlogo.png',
-    'public/uploads/tektalentlogo.png',
-    'public/uploads/tektalentlogo.png',
+    "public/uploads/tektalentlogo.png",
+    "public/uploads/tektalentlogo.png",
+    "public/uploads/tektalentlogo.png",
+    "public/uploads/tektalentlogo.png",
+    "public/uploads/tektalentlogo.png",
+    "public/uploads/tektalentlogo.png",
   ];
 
   const carouselImages2 = [
-    'public/uploads/tektalentlogo.png',
-    'public/uploads/tektalentlogo.png',
-    'public/uploads/tektalentlogo.png',
-    'public/uploads/tektalentlogo.png',
-    'public/uploads/tektalentlogo.png',
-    'public/uploads/tektalentlogo.png',
+    "public/uploads/tektalentlogo.png",
+    "public/uploads/tektalentlogo.png",
+    "public/uploads/tektalentlogo.png",
+    "public/uploads/tektalentlogo.png",
+    "public/uploads/tektalentlogo.png",
+    "public/uploads/tektalentlogo.png",
   ];
 
   return (
@@ -147,7 +147,7 @@ const Home = () => {
       <section id="about" ref={aboutSectionRef} className="py-20 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4">
           <div
-            className={`grid grid-cols-1 md:grid-cols-2 gap-12 items-center ${visibleSections.includes('about') ? 'animate-fade-in' : 'opacity-0'}`}
+            className={`grid grid-cols-1 md:grid-cols-2 gap-12 items-center ${visibleSections.includes("about") ? "animate-fade-in" : "opacity-0"}`}
           >
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800 dark:text-white">
@@ -168,8 +168,8 @@ const Home = () => {
             <div
               className={
                 loading
-                  ? 'h-80'
-                  : `h-80 overflow-hidden rounded-xl shadow-lg ${visibleSections.includes('about') ? 'animate-fade-in' : 'opacity-0'}`
+                  ? "h-80"
+                  : `h-80 overflow-hidden rounded-xl shadow-lg ${visibleSections.includes("about") ? "animate-fade-in" : "opacity-0"}`
               }
             >
               {loading ? (
@@ -190,7 +190,7 @@ const Home = () => {
       <section id="features" ref={featuresSectionRef} className="py-20 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div
-            className={`text-center mb-16 ${visibleSections.includes('features') ? 'animate-fade-in' : 'opacity-0'}`}
+            className={`text-center mb-16 ${visibleSections.includes("features") ? "animate-fade-in" : "opacity-0"}`}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800 dark:text-white">
               What We Do
@@ -208,7 +208,7 @@ const Home = () => {
               <SkeletonCard />
             ) : (
               <div
-                className={`rounded-xl overflow-hidden shadow-lg bg-white dark:bg-gray-800 hover:shadow-xl transition-shadow duration-300 ${visibleSections.includes('features') ? 'animate-fade-in delay-100' : 'opacity-0'}`}
+                className={`rounded-xl overflow-hidden shadow-lg bg-white dark:bg-gray-800 hover:shadow-xl transition-shadow duration-300 ${visibleSections.includes("features") ? "animate-fade-in delay-100" : "opacity-0"}`}
               >
                 <div className="h-48 overflow-hidden">
                   <img
@@ -242,7 +242,7 @@ const Home = () => {
               <SkeletonCard />
             ) : (
               <div
-                className={`rounded-xl overflow-hidden shadow-lg bg-white dark:bg-gray-800 hover:shadow-xl transition-shadow duration-300 ${visibleSections.includes('features') ? 'animate-fade-in delay-200' : 'opacity-0'}`}
+                className={`rounded-xl overflow-hidden shadow-lg bg-white dark:bg-gray-800 hover:shadow-xl transition-shadow duration-300 ${visibleSections.includes("features") ? "animate-fade-in delay-200" : "opacity-0"}`}
               >
                 <div className="h-48 overflow-hidden">
                   <img
@@ -274,7 +274,7 @@ const Home = () => {
               <SkeletonCard />
             ) : (
               <div
-                className={`rounded-xl overflow-hidden shadow-lg bg-white dark:bg-gray-800 hover:shadow-xl transition-shadow duration-300 ${visibleSections.includes('features') ? 'animate-fade-in delay-300' : 'opacity-0'}`}
+                className={`rounded-xl overflow-hidden shadow-lg bg-white dark:bg-gray-800 hover:shadow-xl transition-shadow duration-300 ${visibleSections.includes("features") ? "animate-fade-in delay-300" : "opacity-0"}`}
               >
                 <div className="h-48 overflow-hidden">
                   <img
@@ -308,7 +308,7 @@ const Home = () => {
       <section id="cta" ref={ctaSectionRef} className="py-20 bg-tekOrange text-white">
         <div className="container mx-auto px-4 text-center">
           <div
-            className={`max-w-3xl mx-auto ${visibleSections.includes('cta') ? 'animate-fade-in' : 'opacity-0'}`}
+            className={`max-w-3xl mx-auto ${visibleSections.includes("cta") ? "animate-fade-in" : "opacity-0"}`}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Join Our Community Today</h2>
             <p className="text-lg mb-8">

@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft } from 'lucide-react';
-import { getProject, type Project } from '@/utils/projectLoader';
-import { Badge } from '@/components/ui/badge';
-import SkeletonCard from '@/components/SkeletonCard';
+import { useEffect, useState } from "react";
+import { useParams, Link } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
+import { getProject, type Project } from "@/utils/projectLoader";
+import { Badge } from "@/components/ui/badge";
+import SkeletonCard from "@/components/SkeletonCard";
 
 const ProjectDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -15,10 +15,10 @@ const ProjectDetail = () => {
       setLoading(true);
       try {
         await new Promise(resolve => setTimeout(resolve, 500));
-        const projectData = getProject(slug || '');
+        const projectData = getProject(slug || "");
         setProject(projectData);
       } catch (error) {
-        console.error('Error fetching project:', error);
+        console.error("Error fetching project:", error);
       } finally {
         setLoading(false);
       }

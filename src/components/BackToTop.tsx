@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
-import { ChevronUp } from 'lucide-react';
+import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { ChevronUp } from "lucide-react";
 
 const BackToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -21,17 +21,17 @@ const BackToTop = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', toggleVisibility);
-    return () => window.removeEventListener('scroll', toggleVisibility);
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
   return (
-    <div className={`back-to-top ${isVisible ? 'opacity-100' : 'opacity-0 invisible'}`}>
+    <div className={`back-to-top ${isVisible ? "opacity-100" : "opacity-0 invisible"}`}>
       <Button
         className="rounded-full w-12 h-12 bg-tekOrange hover:bg-orange-600 text-white shadow-lg"
         onClick={scrollToTop}

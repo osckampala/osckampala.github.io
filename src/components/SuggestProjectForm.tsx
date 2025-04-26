@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { toast } from 'sonner';
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 
-import { Button } from '@/components/ui/button';
+import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -11,7 +11,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@/components/ui/dialog';
+} from "@/components/ui/dialog";
 import {
   Form,
   FormControl,
@@ -19,9 +19,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 
 type FormData = {
   name: string;
@@ -40,16 +40,16 @@ export function SuggestProjectForm({
   const [open, setOpen] = useState(false);
   const form = useForm<FormData>({
     defaultValues: {
-      name: '',
-      email: '',
-      projectTitle: '',
-      projectDescription: '',
+      name: "",
+      email: "",
+      projectTitle: "",
+      projectDescription: "",
     },
   });
 
   const onSubmit = (data: FormData) => {
-    console.log('Form submitted:', data);
-    toast.success('Project suggestion submitted successfully!');
+    console.log("Form submitted:", data);
+    toast.success("Project suggestion submitted successfully!");
 
     // Reset form and close dialog
     form.reset();

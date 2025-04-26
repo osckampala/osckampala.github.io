@@ -1,27 +1,27 @@
-import React, { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
-import SkeletonCard from '@/components/SkeletonCard';
-import { getMarkdownFiles, MarkdownFile } from '@/utils/markdownLoader';
-import BlogPost from '@/components/BlogPost';
+import React, { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import SkeletonCard from "@/components/SkeletonCard";
+import { getMarkdownFiles, MarkdownFile } from "@/utils/markdownLoader";
+import BlogPost from "@/components/BlogPost";
 
-const categories = ['All', 'Technology', 'Community', 'Education', 'Social Impact'];
+const categories = ["All", "Technology", "Community", "Education", "Social Impact"];
 
 const Blog = () => {
   const [loading, setLoading] = useState(true);
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState("All");
   const [blogPosts, setBlogPosts] = useState<MarkdownFile[]>([]);
   const [filteredPosts, setFilteredPosts] = useState<MarkdownFile[]>([]);
 
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const posts = await getMarkdownFiles('content/blog');
+        const posts = await getMarkdownFiles("content/blog");
 
         setBlogPosts(posts);
         setFilteredPosts(posts);
         setLoading(false);
       } catch (error) {
-        console.error('Error fetching blog posts:', error);
+        console.error("Error fetching blog posts:", error);
         setLoading(false);
       }
     };
@@ -30,7 +30,7 @@ const Blog = () => {
   }, []);
 
   useEffect(() => {
-    if (selectedCategory === 'All') {
+    if (selectedCategory === "All") {
       setFilteredPosts(blogPosts);
     } else {
       setFilteredPosts(blogPosts.filter(post => post.frontmatter.category === selectedCategory));
@@ -61,11 +61,11 @@ const Blog = () => {
             {categories.map(category => (
               <Button
                 key={category}
-                variant={selectedCategory === category ? 'default' : 'outline'}
+                variant={selectedCategory === category ? "default" : "outline"}
                 className={
                   selectedCategory === category
-                    ? 'bg-tekOrange hover:bg-orange-600 text-white'
-                    : 'border-tekOrange text-tekOrange dark:text-orange-300 hover:bg-orange-50 dark:hover:bg-tekOrange/20'
+                    ? "bg-tekOrange hover:bg-orange-600 text-white"
+                    : "border-tekOrange text-tekOrange dark:text-orange-300 hover:bg-orange-50 dark:hover:bg-tekOrange/20"
                 }
                 onClick={() => setSelectedCategory(category)}
               >
@@ -89,10 +89,10 @@ const Blog = () => {
                     key={post.slug}
                     title={post.frontmatter.title}
                     date={post.frontmatter.date}
-                    author={post.frontmatter.author || 'Tek Talent Africa'}
+                    author={post.frontmatter.author || "Tek Talent Africa"}
                     summary={post.frontmatter.description}
-                    image={post.frontmatter.image || 'public/uploads/tektalentlogo.png'}
-                    category={post.frontmatter.category || 'General'}
+                    image={post.frontmatter.image || "public/uploads/tektalentlogo.png"}
+                    category={post.frontmatter.category || "General"}
                     slug={post.slug}
                   />
                 ))}
@@ -116,7 +116,7 @@ const Blog = () => {
               </p>
               <Button
                 className="mt-4 bg-tekOrange hover:bg-orange-600 text-white"
-                onClick={() => setSelectedCategory('All')}
+                onClick={() => setSelectedCategory("All")}
               >
                 View All Posts
               </Button>

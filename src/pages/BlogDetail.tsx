@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import BlogPost from '@/components/BlogPost';
-import { getMarkdownFiles, getStaticMarkdownFiles, MarkdownFile } from '@/utils/markdownLoader';
-import { ArrowLeft } from 'lucide-react';
-import SkeletonCard from '@/components/SkeletonCard';
+import React, { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import BlogPost from "@/components/BlogPost";
+import { getMarkdownFiles, getStaticMarkdownFiles, MarkdownFile } from "@/utils/markdownLoader";
+import { ArrowLeft } from "lucide-react";
+import SkeletonCard from "@/components/SkeletonCard";
 
 const BlogDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -16,7 +16,7 @@ const BlogDetail = () => {
     const fetchPost = async () => {
       try {
         // Get static posts data
-        const posts = await getMarkdownFiles('content/blog');
+        const posts = await getMarkdownFiles("content/blog");
 
         const foundPost = posts.find(p => p.slug === slug);
         if (foundPost) {
@@ -24,7 +24,7 @@ const BlogDetail = () => {
         }
         setLoading(false);
       } catch (error) {
-        console.error('Error fetching blog post:', error);
+        console.error("Error fetching blog post:", error);
         setLoading(false);
       }
     };
@@ -53,7 +53,7 @@ const BlogDetail = () => {
             The blog post you're looking for doesn't exist or has been moved.
           </p>
           <Button
-            onClick={() => navigate('/blog')}
+            onClick={() => navigate("/blog")}
             className="bg-tekOrange hover:bg-orange-600 text-white"
           >
             Back to Blog
@@ -70,7 +70,7 @@ const BlogDetail = () => {
           <Button
             variant="outline"
             className="mb-6 border-tekOrange text-tekOrange dark:text-orange-300"
-            onClick={() => navigate('/blog')}
+            onClick={() => navigate("/blog")}
           >
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to Blog
@@ -80,10 +80,10 @@ const BlogDetail = () => {
             <BlogPost
               title={post.frontmatter.title}
               date={post.frontmatter.date}
-              author={post.frontmatter.author || 'Tek Talent Africa'}
+              author={post.frontmatter.author || "Tek Talent Africa"}
               summary={post.frontmatter.description}
-              image={post.frontmatter.image || 'public/uploads/tektalentlogo.png'}
-              category={post.frontmatter.category || 'General'}
+              image={post.frontmatter.image || "public/uploads/tektalentlogo.png"}
+              category={post.frontmatter.category || "General"}
               slug={post.slug}
               content={post.content}
               showContent={true}

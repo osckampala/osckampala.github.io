@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
 interface CarouselProps {
   images: string[];
-  direction: 'left' | 'right';
+  direction: "left" | "right";
   className?: string;
 }
 
@@ -12,7 +12,7 @@ const ImageCarousel: React.FC<CarouselProps> = ({ images, direction, className }
   return (
     <div className={`carousel-container ${className}`}>
       <div
-        className={`carousel-track ${direction === 'right' ? 'animate-slide-right' : 'animate-slide-left'} flex`}
+        className={`carousel-track ${direction === "right" ? "animate-slide-right" : "animate-slide-left"} flex`}
       >
         {duplicatedImages.map((image, index) => (
           <div key={index} className="flex-shrink-0 p-1">

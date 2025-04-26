@@ -1,6 +1,6 @@
-import React from 'react';
-import { Calendar, User } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import React from "react";
+import { Calendar, User } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -8,9 +8,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
+} from "@/components/ui/card";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 interface BlogPostProps {
   title: string;
@@ -71,7 +71,7 @@ const BlogPost: React.FC<BlogPostProps> = ({
           <p className="text-gray-600 dark:text-gray-300 mb-4">{summary}</p>
         ) : (
           <div className="prose dark:prose-invert prose-sm md:prose-base max-w-none pt-2">
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>{content || ''}</ReactMarkdown>
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>{content || ""}</ReactMarkdown>
           </div>
         )}
       </CardContent>

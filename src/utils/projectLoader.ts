@@ -1,4 +1,4 @@
-import { projects } from '@/data/projects';
+import { projects } from "@/data/projects";
 
 export type Project = {
   id: string;

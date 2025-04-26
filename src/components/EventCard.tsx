@@ -1,7 +1,7 @@
-import React from 'react';
-import { Calendar, MapPin } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import MarkdownRenderer from '@/components/MarkdownRenderer';
+import React from "react";
+import { Calendar, MapPin } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import MarkdownRenderer from "@/components/MarkdownRenderer";
 
 interface EventCardProps {
   image: string;
@@ -20,7 +20,7 @@ const EventCard: React.FC<EventCardProps> = ({
   title,
   date,
   summary,
-  className = '',
+  className = "",
   slug,
   location,
   content,
@@ -60,7 +60,7 @@ const EventCard: React.FC<EventCardProps> = ({
           <p className="text-gray-600 dark:text-gray-300 mb-4">{summary}</p>
         ) : (
           <div className="mt-4">
-            <MarkdownRenderer content={content || ''} />
+            <MarkdownRenderer content={content || ""} />
           </div>
         )}
 

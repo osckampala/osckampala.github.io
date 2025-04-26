@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
-import ProjectCard from '@/components/ProjectCard';
-import SuggestProjectForm from '@/components/SuggestProjectForm';
-import SkeletonCard from '@/components/SkeletonCard';
-import { getProjects, type Project } from '@/utils/projectLoader';
+import React, { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import ProjectCard from "@/components/ProjectCard";
+import SuggestProjectForm from "@/components/SuggestProjectForm";
+import SkeletonCard from "@/components/SkeletonCard";
+import { getProjects, type Project } from "@/utils/projectLoader";
 
 const Projects = () => {
   const [loading, setLoading] = useState(true);
   const [projects, setProjects] = useState<Project[]>([]);
-  const whatsappLink = 'link to the whatsapp community';
+  const whatsappLink = "link to the whatsapp community";
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -44,7 +44,7 @@ const Projects = () => {
               <Button
                 variant="outline"
                 className="border-tekOrange text-tekOrange hover:bg-tekOrange/10"
-                onClick={() => window.open(whatsappLink, '_blank')}
+                onClick={() => window.open(whatsappLink, "_blank")}
               >
                 Join Our Community
               </Button>

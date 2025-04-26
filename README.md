@@ -113,13 +113,13 @@ Markdown location: `content/blog/*.md`
 
 ```yaml
 ---
-title: 'Post Title'
-date: 'YYYY-MM-DD'
-slug: 'post-slug'
-description: 'Short summary'
-author: 'Author Name'
-image: 'url-to-image'
-category: 'Tech/Events/Other'
+title: "Post Title"
+date: "YYYY-MM-DD"
+slug: "post-slug"
+description: "Short summary"
+author: "Author Name"
+image: "url-to-image"
+category: "Tech/Events/Other"
 ---
 ```
 
@@ -129,12 +129,12 @@ Markdown location: `content/events/*.md`
 
 ```yaml
 ---
-title: 'Event Title'
-date: 'YYYY-MM-DD'
-slug: 'event-slug'
-description: 'Event summary'
-image: 'url-to-image'
-location: 'City, Country'
+title: "Event Title"
+date: "YYYY-MM-DD"
+slug: "event-slug"
+description: "Event summary"
+image: "url-to-image"
+location: "City, Country"
 ---
 ```
 

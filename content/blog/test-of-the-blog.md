@@ -1,11 +1,11 @@
 ---
-title: 'Test of the blog'
-date: '2025-04-17'
-slug: 'test-of-the-blog'
-description: 'Just a test of the blog'
-author: 'Author'
-image: 'public/uploads/tektalentlogo.png'
-category: 'Technology'
+title: "Test of the blog"
+date: "2025-04-17"
+slug: "test-of-the-blog"
+description: "Just a test of the blog"
+author: "Author"
+image: "public/uploads/tektalentlogo.png"
+category: "Technology"
 ---
 
 ## Overview
