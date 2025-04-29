@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowUp, Twitter, Linkedin, Github as GitHub } from "lucide-react";
+import { ArrowUp, Twitter, Linkedin, Github } from "lucide-react";
 
 const Footer = () => {
   const scrollToTop = () => {
