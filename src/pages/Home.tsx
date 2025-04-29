@@ -37,21 +37,17 @@ const Home = () => {
   }, []);
   
   const carouselImages = [
-    "public/uploads/tektalentlogo.png",
-    "public/uploads/tektalentlogo.png",
-    "public/uploads/tektalentlogo.png",
-    "public/uploads/tektalentlogo.png",
-    "public/uploads/tektalentlogo.png",
-    "public/uploads/tektalentlogo.png"
+    "/images/tek-talent-meetup-1.jpeg",
+    "/images/tek-talent-meetup-2.jpeg",
+    "/images/tek-talent-meetup-3.jpeg",
+    "/images/tek-talent-soroti.jpeg"
   ];
   
   const carouselImages2 = [
-    "public/uploads/tektalentlogo.png",
-    "public/uploads/tektalentlogo.png",
-    "public/uploads/tektalentlogo.png",
-    "public/uploads/tektalentlogo.png",
-    "public/uploads/tektalentlogo.png",
-    "public/uploads/tektalentlogo.png"
+    "/images/tek-talent-soroti.jpeg",
+    "/images/tek-talent-meetup-3.jpeg",
+    "/images/tek-talent-meetup-2.jpeg",
+    "/images/tek-talent-meetup-1.jpeg"
   ];
     
   return (
