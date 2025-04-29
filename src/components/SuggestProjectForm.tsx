@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
@@ -31,7 +30,13 @@ type FormData = {
   projectDescription: string;
 };
 
-export function SuggestProjectForm({ trigger, className }: { trigger: React.ReactNode, className?: string }) {
+export function SuggestProjectForm({
+  trigger,
+  className,
+}: {
+  trigger: React.ReactNode;
+  className?: string;
+}) {
   const [open, setOpen] = useState(false);
   const form = useForm<FormData>({
     defaultValues: {
@@ -45,7 +50,7 @@ export function SuggestProjectForm({ trigger, className }: { trigger: React.Reac
   const onSubmit = (data: FormData) => {
     console.log("Form submitted:", data);
     toast.success("Project suggestion submitted successfully!");
-    
+
     // Reset form and close dialog
     form.reset();
     setOpen(false);
@@ -53,14 +58,13 @@ export function SuggestProjectForm({ trigger, className }: { trigger: React.Reac
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger asChild>
-        {trigger}
-      </DialogTrigger>
+      <DialogTrigger asChild>{trigger}</DialogTrigger>
       <DialogContent className="sm:max-w-[525px]">
         <DialogHeader>
           <DialogTitle>Suggest a Project</DialogTitle>
           <DialogDescription>
-            Submit your project idea to the Tek Talent Africa community. We'll review your submission and get back to you.
+            Submit your project idea to the Tek Talent Africa community. We'll review your
+            submission and get back to you.
           </DialogDescription>
         </DialogHeader>
         <Form {...form}>
@@ -85,12 +89,7 @@ export function SuggestProjectForm({ trigger, className }: { trigger: React.Reac
                 <FormItem>
                   <FormLabel>Email</FormLabel>
                   <FormControl>
-                    <Input 
-                      type="email" 
-                      placeholder="yourname@gmail.com" 
-                      required 
-                      {...field} 
-                    />
+                    <Input type="email" placeholder="yourname@gmail.com" required {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -116,7 +115,7 @@ export function SuggestProjectForm({ trigger, className }: { trigger: React.Reac
                 <FormItem>
                   <FormLabel>Project Description</FormLabel>
                   <FormControl>
-                    <Textarea 
+                    <Textarea
                       placeholder="Describe your project idea, goals, and potential impact..."
                       className="min-h-[120px]"
                       required
