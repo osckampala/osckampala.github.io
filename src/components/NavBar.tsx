@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -31,7 +30,7 @@ const NavBar = () => {
   };
 
   // Tobias or anyone can add this WhatsApp community link here
-  const whatsappLink = "";
+  const whatsappLink = "https://chat.whatsapp.com/INVITE_CODE";
   
   return (
     <nav 
@@ -42,11 +41,10 @@ const NavBar = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-2">
           <img 
-            src="public/uploads/tektalentlogo.png" 
+            src="/images/logo.png" 
             alt="Tek Talent Africa" 
-            className="h-10" 
+            className="h-20" 
           />
-          <span className="text-xl font-bold text-tekOrange dark:text-tekOrange hidden md:inline">TekTalent Africa Community</span>
         </Link>
         
         <div className="hidden md:flex items-center gap-8">
@@ -60,7 +58,7 @@ const NavBar = () => {
             to="/events" 
             className={`${isActive('/events') ? 'text-tekOrange font-semibold' : 'hover:text-tekOrange'} transition-colors dark:text-gray-200`}
           >
-            Events & Activities
+            Events
           </Link>
           <Link 
             to="/projects" 
@@ -115,7 +113,7 @@ const NavBar = () => {
             className={`py-3 px-4 ${isActive('/events') ? 'text-tekOrange font-semibold' : ''} dark:text-gray-200`}
             onClick={() => setIsMenuOpen(false)}
           >
-            Events & Activities
+            Events
           </Link>
           <Link 
             to="/projects" 
