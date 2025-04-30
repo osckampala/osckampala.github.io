@@ -156,8 +156,8 @@ const Home = () => {
                 <div className="skeleton h-full w-full rounded-xl"></div>
               ) : (
                 <img 
-                  src="public/uploads/tektalentlogo.png" 
-                  alt="Tek Talent comunity" 
+                  src="/images/tek-talent-meetup-1.jpeg" 
+                  alt="Tek Talent Community Meetup" 
                   className="w-full h-full object-cover"
                 />
               )}
@@ -195,7 +195,7 @@ const Home = () => {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-3 text-gray-800 dark:text-white">Events & Activities</h3>
+                  <h3 className="text-xl font-bold mb-3 text-gray-800 dark:text-white">Events</h3>
                   <p className="text-gray-600 dark:text-gray-300 mb-4">
                     From workshops to hackathons, we organize a variety of events to help you learn, connect, and grow your skills.
                   </p>
