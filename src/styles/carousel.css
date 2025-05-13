@@ -1,0 +1,40 @@
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.carousel-track {
+  display: flex;
+  overflow: hidden;
+}
+
+.carousel-track > div {
+  display: flex;
+  gap: 1rem;
+  min-width: 100%;
+}
+
+.carousel-track:hover > div {
+  animation-play-state: paused;
+}
+
+/* Additional responsive styles */
+@media (max-width: 768px) {
+  .carousel-track > div > div {
+    width: 200px;
+  }
+}
