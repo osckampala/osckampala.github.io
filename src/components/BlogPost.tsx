@@ -1,10 +1,10 @@
 
 import React from "react";
-import { Calendar, User } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Calendar, User, ArrowRight } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
+import MarkdownRenderer from "./MarkdownRenderer";
 
 interface BlogPostProps {
   title: string;
@@ -16,70 +16,94 @@ interface BlogPostProps {
   slug: string;
   content?: string;
   showContent?: boolean;
+  tags?: string[];
 }
 
-const BlogPost: React.FC<BlogPostProps> = ({ 
-  title, 
-  date, 
-  author, 
-  summary, 
-  image, 
-  category, 
+const BlogPost: React.FC<BlogPostProps> = ({
+  title,
+  date,
+  author,
+  summary,
+  image,
+  category,
   slug,
   content,
-  showContent = false
+  showContent = false,
+  tags
 }) => {
   return (
-    <Card className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 animate-fade-in">
-      <div className="w-full h-48 overflow-hidden">
-        <img 
-          src={image} 
-          alt={title} 
-          className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" 
-        />
-      </div>
-      
-      <CardHeader className="pb-2">
-        <div className="flex justify-between items-start">
-          <span className="inline-block px-3 py-1 bg-tekOrange/10 dark:bg-tekOrange/20 text-tekOrange dark:text-orange-300 rounded-full text-sm font-medium">
-            {category}
-          </span>
+    <div className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl h-full flex flex-col">
+      {!showContent && (
+        <div className="relative overflow-hidden h-48">
+          <Link to={`/blog/${slug}`}>
+            <img
+              src={image}
+              alt={title}
+              className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+            />
+            <div className="absolute top-3 left-3 z-10">
+              <Badge className="bg-tekOrange hover:bg-orange-600">
+                {category}
+              </Badge>
+            </div>
+          </Link>
         </div>
-        <CardTitle className="text-xl font-semibold hover:text-tekOrange transition-colors">
-          <a href={`/blog/${slug}`}>{title}</a>
-        </CardTitle>
-        <CardDescription className="flex items-center flex-wrap gap-x-4 text-gray-500 dark:text-gray-400 text-sm">
-          <div className="flex items-center">
+      )}
+      
+      <div className={`p-5 flex flex-col flex-grow ${showContent ? 'px-0 sm:px-4 md:px-6 lg:px-8' : ''}`}>
+        {!showContent ? (
+          <Link to={`/blog/${slug}`}>
+            <h3 className="text-xl font-bold mb-3 text-gray-800 dark:text-white hover:text-tekOrange dark:hover:text-tekOrange transition-colors">
+              {title}
+            </h3>
+          </Link>
+        ) : (
+          <h1 className="text-2xl md:text-3xl font-bold mb-4 text-gray-800 dark:text-white">
+            {title}
+          </h1>
+        )}
+        
+        <div className="flex flex-wrap items-center text-sm mb-3 text-gray-600 dark:text-gray-400">
+          <div className="flex items-center mr-4 mb-1">
             <Calendar size={14} className="mr-1" />
             <span>{date}</span>
           </div>
-          <div className="flex items-center">
+          <div className="flex items-center mb-1">
             <User size={14} className="mr-1" />
             <span>{author}</span>
           </div>
-        </CardDescription>
-      </CardHeader>
-      
-      <CardContent>
-        {!showContent ? (
-          <p className="text-gray-600 dark:text-gray-300 mb-4">{summary}</p>
+        </div>
+        
+        {showContent && content ? (
+          <div className="mb-4 prose dark:prose-invert prose-sm md:prose-base lg:prose-lg max-w-none">
+            <MarkdownRenderer content={content} />
+          </div>
         ) : (
-          <div className="prose dark:prose-invert prose-sm md:prose-base max-w-none pt-2">
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>
-              {content || ''}
-            </ReactMarkdown>
+          <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">{summary}</p>
+        )}
+        
+        {tags && Array.isArray(tags) && tags.length > 0 && (
+          <div className="flex flex-wrap gap-2 mb-4">
+            {tags.map((tag) => (
+              <Badge key={tag} variant="outline" className="text-xs">
+                {tag}
+              </Badge>
+            ))}
           </div>
         )}
-      </CardContent>
-      
-      {!showContent && (
-        <CardFooter className="pt-0">
-          <Button variant="outline" className="border-tekOrange text-tekOrange dark:text-orange-300 hover:bg-tekOrange hover:text-white dark:hover:bg-tekOrange dark:hover:text-white transition-colors">
-            <a href={`/blog/${slug}`}>Read More</a>
-          </Button>
-        </CardFooter>
-      )}
-    </Card>
+        
+        {!showContent && (
+          <div className="mt-auto">
+            <Link to={`/blog/${slug}`}>
+              <Button variant="ghost" className="p-0 h-auto text-tekOrange hover:text-orange-600 hover:bg-transparent flex items-center group">
+                Read More 
+                <ArrowRight size={16} className="ml-1 transform transition-transform group-hover:translate-x-1" />
+              </Button>
+            </Link>
+          </div>
+        )}
+      </div>
+    </div>
   );
 };
 

@@ -66,6 +66,9 @@ export default {
 				tekOrange: '#F97316', // Custom orange from logo
 				tekBlack: '#000000',
 			},
+			fontFamily: {
+				sans: ['Poppins', 'system-ui', 'sans-serif'],
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
@@ -85,8 +88,8 @@ export default {
 					'100%': { transform: 'translateX(100%)' }
 				},
 				'slide-left': {
-					'0%': { transform: 'translateX(100%)' },
-					'100%': { transform: 'translateX(-100%)' }
+					'0%': { transform: 'translateX(0%)' },
+					'100%': { transform: 'translateX(-50%)' }
 				},
 				'fade-in': {
 					'0%': { opacity: '0', transform: 'translateY(10px)' },
@@ -130,13 +133,19 @@ export default {
 				'zoom-out': {
 					'0%': { transform: 'scale(1.1)', opacity: '0' },
 					'100%': { transform: 'scale(1)', opacity: '1' }
+				},
+				'tilt': {
+					'0%, 100%': { transform: 'rotateX(0deg) rotateY(0deg)' },
+					'25%': { transform: 'rotateX(2deg) rotateY(-2deg)' },
+					'50%': { transform: 'rotateX(-1deg) rotateY(1deg)' },
+					'75%': { transform: 'rotateX(1deg) rotateY(-1deg)' },
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'slide-right': 'slide-right 25s linear infinite',
-				'slide-left': 'slide-left 25s linear infinite',
+				'slide-left': 'slide-left 40s linear infinite',
 				'fade-in': 'fade-in 0.5s ease-out',
 				'fade-out': 'fade-out 0.5s ease-out',
 				'bounce-subtle': 'bounce-subtle 2s infinite',
@@ -147,13 +156,21 @@ export default {
 				'float': 'float 3s ease-in-out infinite',
 				'ping': 'ping 1s cubic-bezier(0, 0, 0.2, 1) infinite',
 				'zoom-in': 'zoom-in 0.3s ease-out',
-				'zoom-out': 'zoom-out 0.3s ease-out'
+				'zoom-out': 'zoom-out 0.3s ease-out',
+				'tilt': 'tilt 10s infinite ease-in-out',
 			},
 			transitionProperty: {
 				'height': 'height',
 				'spacing': 'margin, padding',
 				'width': 'width',
 				'transform': 'transform'
+			},
+			backdropBlur: {
+				xs: '2px',
+			},
+			boxShadow: {
+				'inner-sm': 'inset 0 1px 2px 0 rgba(0, 0, 0, 0.05)',
+				'glow': '0 0 15px rgba(249, 115, 22, 0.5)',
 			}
 		}
 	},
