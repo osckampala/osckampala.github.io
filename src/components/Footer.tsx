@@ -9,8 +9,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div className="col-span-1">
             <img 
-              src="/uploads/tektalentlogo.png" 
-              alt="Tek Talent Africa" 
+              src="/images/osca-logo.png" 
+              alt="Open Source Community Kampala" 
               className="h-14 mb-6" 
             />
             <p className="dark:text-gray-300 text-gray-700 mb-4">
@@ -36,7 +36,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-800 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="dark:text-gray-300 text-gray-700 text-sm mb-4 md:mb-0">© 2025 Tek Talent Africa.</p>
+          <p className="dark:text-gray-300 text-gray-700 text-sm mb-4 md:mb-0">© 2025 Open Source Community Kampala.</p>
           
           <div className="flex space-x-6">
             <Link to="#" className="text-gray-500 hover:text-tekOrange transition-colors">
