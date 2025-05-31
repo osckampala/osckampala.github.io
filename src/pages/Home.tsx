@@ -177,8 +177,8 @@ const Home = () => {
   }, []);
   
   const carouselImages = [
-    "/images/tek-talent-meetup-1.jpeg",
-    "/images/tek-talent-meetup-2.jpeg",
+    "/images/community.jpg",
+    "/images/52036321918_a394a1fd59_o.jpg",
     "/images/tek-talent-meetup-3.jpeg",
     "/images/tek-talent-soroti.jpeg",
     "/images/osca-logo.png",
@@ -186,8 +186,10 @@ const Home = () => {
   ];
   
   const carouselImages2 = [
+    "/images/community.jpg",
+        "/images/tek-talent-meetup-3.jpeg",
+    "/images/52036321918_a394a1fd59_o.jpg",
     "/images/tek-talent-soroti.jpeg",
-    "/images/tek-talent-meetup-3.jpeg",
     "/images/tek-talent-meetup-2.jpeg",
     "/images/tek-talent-meetup-1.jpeg",
     "/images/osca-logo.png",

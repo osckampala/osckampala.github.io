@@ -63,7 +63,7 @@ const BlogDetail = () => {
     
     if (navigator.share) {
       navigator.share({
-        title: post?.frontmatter.title || "Tek Talent Blog",
+        title: post?.frontmatter.title || "Open Source Community Kampala Blog",
         text: post?.frontmatter.description || "Check out this blog post!",
         url: shareUrl,
       }).catch(err => {
@@ -118,7 +118,7 @@ const BlogDetail = () => {
     <>
       {/* SEO metadata */}
       <Helmet>
-        <title>{post?.frontmatter.title || "Blog Post"} | Tek Talent Africa</title>
+        <title>{post?.frontmatter.title || "Blog Post"} | Open Source Community Kampala</title>
         <meta name="description" content={post?.frontmatter.description} />
         <meta property="og:title" content={post?.frontmatter.title || "Blog Post"} />
         <meta property="og:description" content={post?.frontmatter.description} />
@@ -145,7 +145,7 @@ const BlogDetail = () => {
                 {/* Featured Image */}
                 <AnimatedSection animation="slide-up" delay={100} className="mb-8 rounded-xl overflow-hidden shadow-lg">
                   <img 
-                    src={post.frontmatter.image || "/uploads/tektalentlogo.png"} 
+                    src={post.frontmatter.image || "/images/osca-logo.png"} 
                     alt={post.frontmatter.title} 
                     className="w-full h-64 md:h-96 object-cover hover:scale-105 transition-all duration-1000"
                     loading="lazy"
@@ -170,16 +170,16 @@ const BlogDetail = () => {
                     </div>
                     <div className="flex items-center">
                       <User size={16} className="mr-2" />
-                      <span>{post.frontmatter.author || "Tek Talent Africa"}</span>
+                      <span>{post.frontmatter.author || "Open Source Community Kampala"}</span>
                     </div>
                   </div>
                   
                   <BlogPost
                     title={post.frontmatter.title}
                     date={post.frontmatter.date}
-                    author={post.frontmatter.author || "Tek Talent Africa"}
+                    author={post.frontmatter.author || "Open Source Community Kampala"}
                     summary={post.frontmatter.description}
-                    image={post.frontmatter.image || "/uploads/tektalentlogo.png"}
+                    image={post.frontmatter.image || "/images/osca-logo.png"}
                     category={post.frontmatter.category || "General"}
                     slug={post.slug}
                     content={post.content}
@@ -234,7 +234,7 @@ const BlogDetail = () => {
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 rounded-full bg-gray-300 dark:bg-gray-600 overflow-hidden mr-4"></div>
                     <div>
-                      <p className="font-medium text-gray-800 dark:text-white">{post.frontmatter.author || "Tek Talent Africa"}</p>
+                      <p className="font-medium text-gray-800 dark:text-white">{post.frontmatter.author || "Open Source Community Kampala"}</p>
                       <p className="text-sm text-gray-600 dark:text-gray-400">Community Contributor</p>
                     </div>
                   </div>
@@ -252,7 +252,7 @@ const BlogDetail = () => {
                         <div key={relatedPost.slug} className="flex gap-3">
                           <div className="w-20 h-20 rounded-md overflow-hidden flex-shrink-0">
                             <img 
-                              src={relatedPost.frontmatter.image || "/uploads/tektalentlogo.png"} 
+                              src={relatedPost.frontmatter.image || "/images/osca-logo.png"} 
                               alt={relatedPost.frontmatter.title} 
                               className="w-full h-full object-cover"
                               loading="lazy"

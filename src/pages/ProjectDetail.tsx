@@ -79,7 +79,7 @@ const ProjectDetail = () => {
     <>
       {/* SEO metadata */}
       <Helmet>
-        <title>{project.title} | Tek Talent Africa</title>
+        <title>{project.title} | Open Source Community Kampala</title>
         <meta name="description" content={project.description} />
         <meta property="og:title" content={project.title} />
         <meta property="og:description" content={project.description} />

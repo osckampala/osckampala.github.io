@@ -3,7 +3,7 @@ title: "Testing Our Blog Functionality"
 date: "2024-04-17"
 slug: "testing-blog-functionality"
 description: "A test post to verify our blog system is working correctly"
-author: "Tek Talent Team"
+author: "OSCK Team"
 image: "public/uploads/tektalentlogo.png"
 category: "Technology"
 ---
@@ -43,10 +43,10 @@ const testFunction = () => {
 ```
 
 ### Links
-[Visit our website](https://tektalentafrica.github.io)
+[Visit our website](https://osckampala.github.io)
 
 ### Images
-![Tek Talent Logo](public/uploads/tektalentlogo.png)
+![Tek Talent Logo](public/uploads/images/osca-logo.png)
 
 ## Content Organization
 The blog should:

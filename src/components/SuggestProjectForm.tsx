@@ -60,7 +60,7 @@ export function SuggestProjectForm({ trigger, className }: { trigger: React.Reac
         <DialogHeader>
           <DialogTitle>Suggest a Project</DialogTitle>
           <DialogDescription>
-            Submit your project idea to the Tek Talent Africa community. We'll review your submission and get back to you.
+            Submit your project idea to the Open Source Community Kampala. We'll review your submission and get back to you.
           </DialogDescription>
         </DialogHeader>
         <Form {...form}>
