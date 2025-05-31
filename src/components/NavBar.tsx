@@ -43,8 +43,8 @@ const NavBar = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-2 group">
           <img 
-            src="/assets/favicon.png" 
-            alt="Tek Talent Africa" 
+            src="/images/osca-logo.png" 
+            alt="Open Source Community Kampala" 
             className="h-10 transition-transform group-hover:scale-110 duration-300" 
           />
           <span className="text-xl font-bold text-tekOrange dark:text-tekOrange hidden md:inline group-hover:text-gradient transition-all duration-300">

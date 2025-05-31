@@ -273,7 +273,7 @@ const Blog = () => {
                   <BlogPost
                     title={post.frontmatter.title}
                     date={post.frontmatter.date}
-                    author={post.frontmatter.author || "Tek Talent Africa"}
+                    author={post.frontmatter.author || "Open Source Community Kampala"}
                     summary={post.frontmatter.description}
                     image={post.frontmatter.image || "/public/images/osca-logo.png"}
                     category={post.frontmatter.category || "General"}
