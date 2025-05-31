@@ -175,7 +175,7 @@ const Events = () => {
             className="h-full"
           >
             <EventCard 
-              image={event.frontmatter.image || "/public/uploads/tektalentlogo.png"}
+              image={event.frontmatter.image || "/public/images/osca-logo.png"}
               title={event.frontmatter.title}
               date={event.frontmatter.date}
               summary={event.frontmatter.description} 
@@ -314,7 +314,7 @@ const Events = () => {
                 {featuredEvents.map((event) => (
                   <CarouselItem key={event.slug} className="md:basis-1/2 lg:basis-1/3 p-1">
                     <EventCard
-                      image={event.frontmatter.image || "/public/uploads/tektalentlogo.png"}
+                      image={event.frontmatter.image || "/public/images/osca-logo.png"}
                       title={event.frontmatter.title}
                       date={event.frontmatter.date}
                       summary={event.frontmatter.description} 

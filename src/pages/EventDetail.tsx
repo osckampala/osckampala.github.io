@@ -75,7 +75,7 @@ const EventDetail = () => {
     
     if (navigator.share) {
       navigator.share({
-        title: event?.frontmatter.title || "Tek Talent Event",
+        title: event?.frontmatter.title || "Open Source Community Kampala Event",
         text: event?.frontmatter.description || "Check out this event!",
         url: shareUrl,
       }).catch(err => {
@@ -136,7 +136,7 @@ const EventDetail = () => {
     <>
       {/* SEO metadata */}
       <Helmet>
-        <title>{event?.frontmatter.title || "Event"} | Tek Talent Africa</title>
+        <title>{event?.frontmatter.title || "Event"} | Open Source Community Kampala</title>
         <meta name="description" content={event?.frontmatter.description} />
         <meta property="og:title" content={event?.frontmatter.title || "Event"} />
         <meta property="og:description" content={event?.frontmatter.description} />
@@ -161,7 +161,7 @@ const EventDetail = () => {
             {/* Event Image */}
             <AnimatedSection animation="scale-in" delay={50} className="rounded-xl overflow-hidden mb-8 h-72 md:h-96 shadow-xl">
               <img 
-                src={event.frontmatter.image || "/uploads/tektalentlogo.png"} 
+                src={event.frontmatter.image || "/images/osca-logo.png"} 
                 alt={event.frontmatter.title} 
                 className="w-full h-full object-cover hover:scale-105 transition-all duration-1000"
                 loading="eager" 
@@ -217,7 +217,7 @@ const EventDetail = () => {
             {/* Event Content */}
             <AnimatedSection animation="fade-in" delay={100} className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden p-8">
               <EventCard
-                image={event.frontmatter.image || "/uploads/tektalentlogo.png"}
+                image={event.frontmatter.image || "/images/osca-logo.png"}
                 title={event.frontmatter.title}
                 date={event.frontmatter.date}
                 summary={event.frontmatter.description}
@@ -236,7 +236,7 @@ const EventDetail = () => {
               <AnimatedSection animation="slide-up" delay={150} className="bg-gradient-to-r from-tekOrange/20 to-tekOrange/10 dark:from-tekOrange/30 dark:to-tekOrange/20 rounded-xl p-8 my-12 text-center shadow-lg border border-tekOrange/20">
                 <h3 className="text-2xl font-bold mb-4 text-tekOrange">Ready to join us?</h3>
                 <p className="text-gray-700 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
-                  Don't miss this opportunity to connect, learn, and grow with the Tek Talent Africa community.
+                  Don't miss this opportunity to connect, learn, and grow with the Open Source Community Kampala.
                 </p>
                 <Button 
                   className={`${
@@ -264,7 +264,7 @@ const EventDetail = () => {
                       delay={250 + index * 50}
                     >
                       <EventCard 
-                        image={relatedEvent.frontmatter.image || "/uploads/tektalentlogo.png"}
+                        image={relatedEvent.frontmatter.image || "/images/osca-logo.png"}
                         title={relatedEvent.frontmatter.title}
                         date={relatedEvent.frontmatter.date}
                         summary={relatedEvent.frontmatter.description}

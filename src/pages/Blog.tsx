@@ -275,7 +275,7 @@ const Blog = () => {
                     date={post.frontmatter.date}
                     author={post.frontmatter.author || "Tek Talent Africa"}
                     summary={post.frontmatter.description}
-                    image={post.frontmatter.image || "/public/uploads/tektalentlogo.png"}
+                    image={post.frontmatter.image || "/public/images/osca-logo.png"}
                     category={post.frontmatter.category || "General"}
                     slug={post.slug}
                   />
