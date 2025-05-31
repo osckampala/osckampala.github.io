@@ -2,7 +2,7 @@
 <h1 align="center" style="bold">Open Source Community Kampala Site</h1>
 
 <p align="center">
-  <!-- <img src="public/uploads/tektalentlogo.png" alt="Tek Talent Africa Logo" width="200" /> -->
+  <img src="public/images/osca-logo.png" alt="OSCK Logo" width="200" />
 </p>
 
 <p align="center">
@@ -221,8 +221,8 @@ jobs:
 
 ```bash
 # Clone the repo
-git clone https://github.com/TekTalentAfrica/tektalentafrica.github.io.git
-cd tektalentafrica.github.io
+git clone https://github.com/osckampla/osckampla.github.io.git
+cd osckampla.github.io
 
 # Install dependencies
 npm install
