@@ -33,63 +33,63 @@ const Home = () => {
       id: 1,
       name: "name",
       role: "Developer",
-      image: "/uploads/tektalentlogo.png",
+      image: "/images/osca-logo.png",
       content: "content"
     },
     {
       id: 1,
       name: "name",
       role: "Developer",
-      image: "/uploads/tektalentlogo.png",
+      image: "/images/osca-logo.png",
       content: "content"
     },
     {
       id: 1,
       name: "name",
       role: "Developer",
-      image: "/uploads/tektalentlogo.png",
+      image: "/images/osca-logo.png",
       content: "content"
     },
     {
       id: 1,
       name: "name",
       role: "Developer",
-      image: "/uploads/tektalentlogo.png",
+      image: "/images/osca-logo.png",
       content: "content"
     },
     {
       id: 1,
       name: "name",
       role: "Developer",
-      image: "/uploads/tektalentlogo.png",
+      image: "/images/osca-logo.png",
       content: "content"
     },
     {
       id: 1,
       name: "name",
       role: "Developer",
-      image: "/uploads/tektalentlogo.png",
+      image: "/images/osca-logo.png",
       content: "content"
     },
     {
       id: 1,
       name: "name",
       role: "Developer",
-      image: "/uploads/tektalentlogo.png",
+      image: "/images/osca-logo.png",
       content: "content"
     },
     {
       id: 1,
       name: "name",
       role: "Developer",
-      image: "/uploads/tektalentlogo.png",
+      image: "/images/osca-logo.png",
       content: "content"
     },
     {
       id: 1,
       name: "name",
       role: "Developer",
-      image: "/uploads/tektalentlogo.png",
+      image: "/images/osca-logo.png",
       content: "content"
     }
   ];
@@ -181,8 +181,8 @@ const Home = () => {
     "/images/tek-talent-meetup-2.jpeg",
     "/images/tek-talent-meetup-3.jpeg",
     "/images/tek-talent-soroti.jpeg",
-    "/uploads/tektalentlogo.png",
-    "/uploads/tektalentlogo.png"
+    "/images/osca-logo.png",
+    "/images/osca-logo.png"
   ];
   
   const carouselImages2 = [
@@ -190,8 +190,8 @@ const Home = () => {
     "/images/tek-talent-meetup-3.jpeg",
     "/images/tek-talent-meetup-2.jpeg",
     "/images/tek-talent-meetup-1.jpeg",
-    "/uploads/tektalentlogo.png",
-    "/uploads/tektalentlogo.png"
+    "/images/osca-logo.png",
+    "/images/osca-logo.png"
   ];
     
   return (
@@ -208,7 +208,7 @@ const Home = () => {
         <div className="container mx-auto px-4 z-10 text-center mb-16">
           <div className="animate-fade-in max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-7xl font-bold mb-8 text-white">
-              <span className="text-tekOrange">Tek Talent</span> Africa Community
+              <span className="text-tekOrange">Open Source</span> Community Kampala
             </h1>
             <p className="text-lg md:text-xl text-white mb-12 max-w-3xl mx-auto">
               A vibrant community of tech enthusiasts, developers and innovators building the future of technology in Africa.
@@ -320,7 +320,7 @@ const Home = () => {
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800 dark:text-white">About Us</h2>
               <div className="w-24 h-1 bg-tekOrange mb-6"></div>
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
-                Tek Talent Africa is a community-driven platform dedicated to fostering tech talent and innovation across Africa. We provide resources, networking opportunities, and support to help tech enthusiasts grow and succeed.
+                Open Source Community Kampala is a community-driven platform dedicated to fostering tech talent and innovation across Africa. We provide resources, networking opportunities, and support to help tech enthusiasts grow and succeed.
               </p>
               <p className="text-lg text-gray-600 dark:text-gray-300">
                 Our mission is to bridge the gap between tech education and industry needs, creating a sustainable ecosystem for tech talent development in Africa.
@@ -332,8 +332,8 @@ const Home = () => {
                 <div className="skeleton h-full w-full rounded-xl"></div>
               ) : (
                 <img 
-                  src="/uploads/tektalentlogo.png" 
-                  alt="Tek Talent community" 
+                  src="/images/osca-logo.png" 
+                  alt="Open Source Community Kampala" 
                   className="w-full h-full object-cover"
                 />
               )}
@@ -375,9 +375,9 @@ const Home = () => {
                   <BlogPost
                     title={blog.frontmatter.title}
                     date={blog.frontmatter.date}
-                    author={blog.frontmatter.author || "Tek Talent Africa"}
+                    author={blog.frontmatter.author || "Open Source Community Kampala"}
                     summary={blog.frontmatter.description}
-                    image={blog.frontmatter.image || "/uploads/tektalentlogo.png"}
+                    image={blog.frontmatter.image || "/images/osca-logo.png"}
                     category={blog.frontmatter.category || "General"}
                     slug={blog.slug}
                   />
@@ -423,7 +423,7 @@ const Home = () => {
               upcomingEvents.map((event, index) => (
                 <div key={event.slug} className={`${visibleSections.includes('upcoming-events') ? `animate-fade-in delay-${(index + 1) * 100}` : 'opacity-0'}`}>
                   <EventCard
-                    image={event.frontmatter.image || "/uploads/tektalentlogo.png"}
+                    image={event.frontmatter.image || "/images/osca-logo.png"}
                     title={event.frontmatter.title}
                     date={event.frontmatter.date}
                     summary={event.frontmatter.description}
@@ -467,7 +467,7 @@ const Home = () => {
               <div className={`rounded-xl overflow-hidden shadow-lg bg-white dark:bg-gray-800 hover:shadow-xl transition-shadow duration-300 ${visibleSections.includes('features') ? 'animate-fade-in delay-100' : 'opacity-0'}`}>
                 <div className="h-48 overflow-hidden">
                   <img 
-                    src="/uploads/tektalentlogo.png"
+                    src="/images/osca-logo.png"
                     alt="Tech Events" 
                     className="w-full h-full object-cover"
                   />
@@ -493,7 +493,7 @@ const Home = () => {
               <div className={`rounded-xl overflow-hidden shadow-lg bg-white dark:bg-gray-800 hover:shadow-xl transition-shadow duration-300 ${visibleSections.includes('features') ? 'animate-fade-in delay-200' : 'opacity-0'}`}>
                 <div className="h-48 overflow-hidden">
                   <img 
-                    src="/uploads/tektalentlogo.png"
+                    src="/images/osca-logo.png"
                     alt="Tech Projects" 
                     className="w-full h-full object-cover"
                   />
@@ -519,7 +519,7 @@ const Home = () => {
               <div className={`rounded-xl overflow-hidden shadow-lg bg-white dark:bg-gray-800 hover:shadow-xl transition-shadow duration-300 ${visibleSections.includes('features') ? 'animate-fade-in delay-300' : 'opacity-0'}`}>
                 <div className="h-48 overflow-hidden">
                   <img 
-                    src="/uploads/tektalentlogo.png" 
+                    src="/images/osca-logo.png" 
                     alt="Tech Blog" 
                     className="w-full h-full object-cover"
                   />
@@ -550,7 +550,7 @@ const Home = () => {
             </h2>
             <div className="w-24 h-1 bg-tekOrange mx-auto mb-6"></div>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Hear what our community members have to say about their experience with Tek Talent Africa.
+              Hear what our community members have to say about their experience with Open Source Community Kampala.
             </p>
           </div>
           

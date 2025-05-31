@@ -48,7 +48,7 @@ const NavBar = () => {
             className="h-10 transition-transform group-hover:scale-110 duration-300" 
           />
           <span className="text-xl font-bold text-tekOrange dark:text-tekOrange hidden md:inline group-hover:text-gradient transition-all duration-300">
-            TekTalent Africa Community
+            Open Source Community Kampala
           </span>
         </Link>
         
