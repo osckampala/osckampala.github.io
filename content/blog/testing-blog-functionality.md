@@ -1,4 +1,4 @@
- ---
+---
 title: "Testing Our Blog Functionality"
 date: "2024-04-17"
 slug: "testing-blog-functionality"
